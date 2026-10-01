@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodSave - Admin Module</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+    <section id="appPage" class="page">
+        <header class="topbar app-topbar">
+            <div class="brand">
+                <span class="brand-icon">🍲</span>
+                <div>
+                    <h1>FoodSave</h1>
+                    <p id="roleText">Admin Module</p>
+                </div>
+            </div>
+
+            <div class="user-menu">
+                <span id="welcomeText">Welcome</span>
+                <button class="btn btn-outline btn-small" onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="app-layout">
+            <aside class="sidebar">
+                <button class="side-link active" data-section="dashboardSection" onclick="openSection('dashboardSection')">🏠 Dashboard</button>
+                <button class="side-link" data-section="adminUsersSection" onclick="openSection('adminUsersSection')">👥 Manage Users</button>
+                <button class="side-link" data-section="adminFoodSection" onclick="openSection('adminFoodSection')">🛠️ Manage Donations</button>
+                <button class="side-link" data-section="adminClaimsSection" onclick="openSection('adminClaimsSection')">📦 Manage Claims</button>
+            </aside>
+
+            <main class="main-content">
+                <!-- USER + ADMIN DASHBOARD -->
+                <section id="dashboardSection" class="app-section">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">Overview</span>
+                            <h2 id="dashboardTitle">Dashboard</h2>
+                            <p id="dashboardSubtitle" class="muted">Manage your FoodSave activity.</p>
+                        </div>
+                    </div>
+
+                    <div id="statsGrid" class="stats-grid"></div>
+
+                    <div class="dashboard-grid">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 id="recentTitle">Recent Activity</h3>
+                                <button class="text-button" onclick="refreshDashboard()">Refresh</button>
+                            </div>
+                            <div id="recentActivity"></div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3>Expiry Alerts</h3>
+                            </div>
+                            <div id="expiryAlerts"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ADMIN USERS -->
+                <section id="adminUsersSection" class="app-section hidden admin-only">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">Admin Module</span>
+                            <h2>Manage Users</h2>
+                            <p class="muted">View registered users and their roles.</p>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>City</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+                <!-- ADMIN FOOD -->
+                <section id="adminFoodSection" class="app-section hidden admin-only">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">Admin Module</span>
+                            <h2>Manage Donations</h2>
+                            <p class="muted">Monitor all food posted on the platform.</p>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Food</th>
+                                    <th>Donor</th>
+                                    <th>City</th>
+                                    <th>Expiry</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminFoodTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+                <!-- ADMIN CLAIMS -->
+                <section id="adminClaimsSection" class="app-section hidden admin-only">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">Admin Module</span>
+                            <h2>Manage Claims</h2>
+                            <p class="muted">Track which users have claimed donations.</p>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Food</th>
+                                    <th>Claimed By</th>
+                                    <th>Donor</th>
+                                    <th>Claim Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminClaimsTableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <footer class="app-footer">
+            <a href="index.html#aboutPage">About</a>
+            <a href="index.html#contactPage">Contact</a>
+            <a href="index.html#termsPage">Terms &amp; Conditions</a>
+            <a href="index.html#privacyPage">Privacy Policy</a>
+        </footer>
+    </section>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

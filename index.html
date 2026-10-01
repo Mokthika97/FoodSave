@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodSave - Food Waste Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="public">
+    <!-- ================= LANDING PAGE ================= -->
+    <section id="landingPage" class="page">
+        <header class="topbar public-nav">
+            <div class="brand">
+                <span class="brand-icon">🍲</span>
+                <div>
+                    <h1>FoodSave</h1>
+                    <p>Share food. Reduce waste. Help people.</p>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="showPage('loginPage')">Login</button>
+                <button class="btn btn-primary" onclick="showPage('signupPage')">Create Account</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <span class="badge">SDC Project • Food Waste Management</span>
+                    <h2>Turn surplus food into a helping hand.</h2>
+                    <p>
+                        FoodSave connects people and organizations that have extra food
+                        with charities, food banks and people who can distribute it.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" onclick="showPage('signupPage')">
+                            Get Started
+                        </button>
+                        <button class="btn btn-outline btn-large" onclick="showPage('loginPage')">
+                            Login
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-card-icon">🥗</div>
+                    <h3>One simple idea</h3>
+                    <p>Food that can be shared should not become waste.</p>
+                    <div class="mini-stats">
+                        <div><strong>Donate</strong><span>Surplus food</span></div>
+                        <div><strong>Match</strong><span>Nearby users</span></div>
+                        <div><strong>Claim</strong><span>For distribution</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature-grid container">
+                <article class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Location Matching</h3>
+                    <p>Find available food in your city or use browser location for distance-based matching.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Expiry Alerts</h3>
+                    <p>Food that expires soon is highlighted so recipients can act quickly.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Donation History</h3>
+                    <p>Users can track their donations and claimed food from their dashboard.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Admin Control</h3>
+                    <p>Admins can monitor users, donations and claims from a separate module.</p>
+                </article>
+            </section>
+
+            <section class="impact-strip container">
+                <div class="impact-copy">
+                    <span class="eyebrow">Why FoodSave?</span>
+                    <h3>Small actions. Real impact.</h3>
+                    <p>Give surplus food a second chance through a simple, location-aware sharing platform.</p>
+                </div>
+                <div class="impact-metrics">
+                    <div><strong>01</strong><span>Donate surplus</span></div>
+                    <div><strong>02</strong><span>Find nearby food</span></div>
+                    <div><strong>03</strong><span>Claim & distribute</span></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div>
+                <strong>FoodSave</strong>
+                <p>Share food. Reduce waste. Help people.</p>
+            </div>
+            <div class="footer-links">
+                <button onclick="showPage('aboutPage')">About</button>
+                <button onclick="showPage('contactPage')">Contact</button>
+                <button onclick="showPage('termsPage')">Terms & Conditions</button>
+                <button onclick="showPage('privacyPage')">Privacy Policy</button>
+            </div>
+            <small>© 2026 FoodSave. Educational project.</small>
+        </footer>
+    </section>
+
+    <!-- ================= ABOUT PAGE ================= -->
+    <section id="aboutPage" class="page hidden legal-page">
+        <div class="legal-shell">
+            <button class="back-link" onclick="showPage('landingPage')">← Back to home</button>
+            <span class="badge">About FoodSave</span>
+            <h2>Making surplus food useful.</h2>
+            <p>FoodSave is a food waste management project that connects people who have surplus food with users who can claim it for distribution.</p>
+            <div class="legal-grid">
+                <div class="legal-card"><h3>Donate</h3><p>Users can post surplus food with quantity, location, category and expiry details.</p></div>
+                <div class="legal-card"><h3>Find</h3><p>Users can search available food by name, city and category.</p></div>
+                <div class="legal-card"><h3>Manage</h3><p>Administrators can monitor users, donations and claims.</p></div>
+            </div>
+            <button class="btn btn-primary" onclick="showPage('landingPage')">Back to FoodSave</button>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT PAGE ================= -->
+    <section id="contactPage" class="page hidden legal-page">
+        <div class="legal-shell">
+            <button class="back-link" onclick="showPage('landingPage')">← Back to home</button>
+            <span class="badge">Contact</span>
+            <h2>Contact FoodSave</h2>
+            <p>If you have a question about this project, please contact the project administrator through your college/project communication channel.</p>
+            <div class="legal-card">
+                <h3>Project Support</h3>
+                <p><strong>Project:</strong> FoodSave - Food Waste Management System</p>
+                <p><strong>Purpose:</strong> Academic / educational project</p>
+                <p class="muted">Do not enter sensitive personal information into this demo application.</p>
+            </div>
+            <button class="btn btn-primary" onclick="showPage('landingPage')">Back to FoodSave</button>
+        </div>
+    </section>
+
+    <!-- ================= TERMS PAGE ================= -->
+    <section id="termsPage" class="page hidden legal-page">
+        <div class="legal-shell">
+            <button class="back-link" onclick="showPage('landingPage')">← Back to home</button>
+            <span class="badge">Legal</span>
+            <h2>Terms & Conditions</h2>
+            <p class="muted">Last updated: September 2026</p>
+            <div class="legal-card legal-content">
+                <h3>1. Use of FoodSave</h3>
+                <p>FoodSave is an educational food-sharing platform demo. Users should provide accurate information when creating accounts and food donations.</p>
+                <h3>2. Food Information</h3>
+                <p>Donors are responsible for providing accurate food name, quantity, description, location and expiry information. Users should check food condition and suitability before accepting any donation.</p>
+                <h3>3. User Conduct</h3>
+                <p>Users must not misuse the platform, provide misleading information, attempt unauthorized access, or use the application for unlawful activity.</p>
+                <h3>4. Claims and Donations</h3>
+                <p>A food claim records an intended claim in this demo. FoodSave does not guarantee delivery, food quality, safety, availability or successful distribution.</p>
+                <h3>5. Admin Access</h3>
+                <p>Administrative features are intended only for authorized administrators. Users must not attempt to access or modify admin-only features.</p>
+                <h3>6. Changes</h3>
+                <p>These terms may be updated as the project develops. Users should review the latest version before continuing to use the demo.</p>
+            </div>
+            <button class="btn btn-primary" onclick="showPage('landingPage')">Back to FoodSave</button>
+        </div>
+    </section>
+
+    <!-- ================= PRIVACY PAGE ================= -->
+    <section id="privacyPage" class="page hidden legal-page">
+        <div class="legal-shell">
+            <button class="back-link" onclick="showPage('landingPage')">← Back to home</button>
+            <span class="badge">Privacy</span>
+            <h2>Privacy Policy</h2>
+            <p class="muted">Last updated: September 2026</p>
+            <div class="legal-card legal-content">
+                <h3>1. Information Stored</h3>
+                <p>The demo can store your name, email, password, city, food donation details, claim details and optional browser location information.</p>
+                <h3>2. Where Information Is Stored</h3>
+                <p>This version of FoodSave stores data in your browser's Local Storage. It is not a production database.</p>
+                <h3>3. Location</h3>
+                <p>GPS location is optional and is requested only when you choose a location feature.</p>
+                <h3>4. How Information Is Used</h3>
+                <p>Stored information is used to provide login, role-based access, food search, donation, claiming, history and admin dashboard features.</p>
+                <h3>5. Demo Limitation</h3>
+                <p>Do not use real sensitive information or real passwords in this academic demo. A production version would require secure server-side authentication, encrypted password storage and proper security controls.</p>
+                <h3>6. Clearing Data</h3>
+                <p>Because this version uses Local Storage, clearing the browser's site data can remove locally stored FoodSave information.</p>
+            </div>
+            <button class="btn btn-primary" onclick="showPage('landingPage')">Back to FoodSave</button>
+        </div>
+    </section>
+
+    <!-- ================= LOGIN PAGE ================= -->
+    <section id="loginPage" class="page hidden">
+        <div class="auth-layout">
+            <div class="auth-info">
+                <button class="back-link" onclick="showPage('landingPage')">← Back to home</button>
+                <span class="badge">Welcome back</span>
+                <h2>Login to FoodSave</h2>
+                <p>Use your registered account to donate food, claim food or manage the platform.</p>
+                <p class="legal-links"><button type="button" class="text-button" onclick="showPage('termsPage')">Terms & Conditions</button> · <button type="button" class="text-button" onclick="showPage('privacyPage')">Privacy Policy</button></p>
+
+                <div class="demo-box">
+                    <h4>Demo Admin Account</h4>
+                    <p><strong>Email:</strong> admin@foodsave.com</p>
+                    <p><strong>Password:</strong> admin123</p>
+                </div>
+            </div>
+
+            <form id="loginForm" class="form-card">
+                <h3>Login</h3>
+                <p class="muted">Enter your account details.</p>
+
+                <div id="loginMessage" class="message hidden"></div>
+
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" placeholder="you@example.com" required>
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" placeholder="Enter password" required>
+
+                <button class="btn btn-primary full-width" type="submit">Login</button>
+
+                <p class="form-footer">
+                    Don't have an account?
+                    <button type="button" class="text-button" onclick="showPage('signupPage')">Sign up</button>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= SIGNUP PAGE ================= -->
+    <section id="signupPage" class="page hidden">
+        <div class="auth-layout">
+            <div class="auth-info">
+                <button class="back-link" onclick="showPage('landingPage')">← Back to home</button>
+                <span class="badge">Join FoodSave</span>
+                <h2>Create your account</h2>
+                <p>Register as a user to donate surplus food or claim available food.</p>
+                <ul class="check-list">
+                    <li>Post surplus food</li>
+                    <li>Find nearby donations</li>
+                    <li>Claim food for distribution</li>
+                    <li>Track your donation history</li>
+                </ul>
+            </div>
+
+            <form id="signupForm" class="form-card">
+                <h3>Sign Up</h3>
+                <p class="muted">All fields are required.</p>
+
+                <div id="signupMessage" class="message hidden"></div>
+
+                <label for="signupName">Full Name</label>
+                <input id="signupName" type="text" placeholder="Enter your name" required>
+
+                <label for="signupEmail">Email</label>
+                <input id="signupEmail" type="email" placeholder="you@example.com" required>
+
+                <label for="signupPassword">Password</label>
+                <input id="signupPassword" type="password" minlength="6" placeholder="Minimum 6 characters" required>
+
+                <label for="signupCity">City</label>
+                <input id="signupCity" type="text" placeholder="Example: Hyderabad" required>
+
+                <label class="agreement-row">
+                    <input id="termsAgreement" type="checkbox" required>
+                    <span>I agree to the <button type="button" class="text-button" onclick="showPage('termsPage')">Terms & Conditions</button> and <button type="button" class="text-button" onclick="showPage('privacyPage')">Privacy Policy</button>.</span>
+                </label>
+
+                <button class="btn btn-primary full-width" type="submit">Create Account</button>
+
+                <p class="form-footer">
+                    Already registered?
+                    <button type="button" class="text-button" onclick="showPage('loginPage')">Login</button>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
